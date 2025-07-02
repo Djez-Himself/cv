@@ -7,10 +7,8 @@
   --color-accent: #ff7f50;
   --color-accent2: #4f96e8;
   --color-accent3: #23272b;
-  --color-badge: linear-gradient(90deg, #ff7f50 60%, #4f96e8 100%);
   --color-text: #f7f9fa;
   --color-title: #ff7f50;
-  --color-badge-text: #23272b;
   --color-shadow: 0 4px 24px rgba(0,0,0,0.18);
 }
 body {
@@ -126,11 +124,6 @@ body {
 .skills-list li:not(:last-child) {
   margin-right: 0.3rem;
 }
-.skills-list .badge {
-  margin-bottom: 0.2rem;
-  margin-right: 0;
-  cursor: pointer;
-}
 .skills-list .progress {
   position: absolute;
   left: 0;
@@ -162,10 +155,6 @@ body {
   z-index: 10;
   transition: opacity 0.25s, visibility 0.25s;
 }
-.skills-list .badge:hover + .tooltip {
-  visibility: visible;
-  opacity: 1;
-}
 .skills-list .tooltip::before {
   content: '';
   position: absolute;
@@ -175,6 +164,10 @@ body {
   border-width: 8px 8px 8px 0;
   border-style: solid;
   border-color: transparent #23272b transparent transparent;
+}
+.skills-list .badge:hover + .tooltip {
+  visibility: visible;
+  opacity: 1;
 }
 .main-content {
   flex: 1;
